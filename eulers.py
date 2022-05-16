@@ -36,7 +36,7 @@ def eulers_endpoint(f, h, t0, y0, tf, verbose=True):
     yn = y0
 
     if verbose:
-        print("n: {} tn: {} yn: {} fn: {}".format(i, tn, yn, f(tn, yn)))
+        print("n: {:5f} tn: {:5f} yn: {:5f} fn: {:5f}".format(round(i, 1), round(tn, 3), round(yn, 5), round(f(tn, yn), 5)))
 
     i = i + 1
 
@@ -47,7 +47,7 @@ def eulers_endpoint(f, h, t0, y0, tf, verbose=True):
         tn = tn + h
 
         if verbose:
-            print("n: {} tn: {} yn: {} fn: {}".format(i, round(tn, 3), round(yn, 5), round(f(tn, yn), 5)))
+            print("n: {:5f} tn: {:5f} yn: {:5f} fn: {:5f}".format(round(i, 1), round(tn, 3), round(yn, 5), round(f(tn, yn), 5)))
 
         i = i + 1
 
@@ -55,4 +55,4 @@ def eulers_endpoint(f, h, t0, y0, tf, verbose=True):
             break
 
 # Input params: func,         h,   t0, y0, tf
-eulers_endpoint(method_2_7_1, 0.05, 0, 1, 0.4)
+eulers_endpoint(method_2_7_1, 0.025, 0, 1, 0.4)
