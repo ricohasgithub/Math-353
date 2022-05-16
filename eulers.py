@@ -1,4 +1,6 @@
 
+# Doing euler's method by hand is cringe
+
 # Methods to be integrated, must have (tn, yn) as input
 def method_2_7_1(tn, yn):
     return 3 + tn - yn
@@ -52,4 +54,5 @@ def eulers_endpoint(f, h, t0, y0, tf, verbose=True):
         if tn >= tf:
             break
 
+# Input params: func,         h,   t0, y0, tf
 eulers_endpoint(method_2_7_1, 0.05, 0, 1, 0.4)
