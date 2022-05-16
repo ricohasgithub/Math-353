@@ -2,8 +2,12 @@
 # Doing euler's method by hand is cringe
 
 # Methods to be integrated, must have (tn, yn) as input
+
 def method_2_7_1(tn, yn):
     return 3 + tn - yn
+
+def method_2_7_12(tn, yn):
+    return (tn * tn) + (yn * yn)
 
 # Performs euler's method with step h on callback func f for up to n steps
 def eulers_method(f, h, t0, y0, n, verbose=True):
@@ -55,4 +59,5 @@ def eulers_endpoint(f, h, t0, y0, tf, verbose=True):
             break
 
 # Input params: func,         h,   t0, y0, tf
-eulers_endpoint(method_2_7_1, 0.025, 0, 1, 0.4)
+# eulers_endpoint(method_2_7_1, 0.025, 0, 1, 0.4)
+eulers_endpoint(method_2_7_12, 0.01, 0, 1, 1)
